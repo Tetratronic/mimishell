@@ -10,7 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	pwd()
-{
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
 
+int	pwd(void)
+{
+	char	cwd[PATH_MAX];
+	size_t	size;
+
+	size = 0;
+	if (getcwd(cwd, PATH_MAX))
+		printf("%s\n", cwd);
+	else
+	{
+		perror("getcwd() error");
+		return (1);
+	}
+	return (0);
 }
