@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cd.c                                               :+:      :+:    :+:   */
+/*   exit.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenkaro <abenkaro@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/23 20:18:55 by abenkaro          #+#    #+#             */
-/*   Updated: 2025/04/23 20:18:56 by abenkaro         ###   ########.fr       */
+/*   Created: 2025/04/24 10:30:04 by abenkaro          #+#    #+#             */
+/*   Updated: 2025/04/24 10:30:07 by abenkaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-
-int	cd(char *dir)
+int	exit(/* vars */)
 {
-	int	a;
-
-	a = chdir(dir);
-	if (a)
-		perror("cd");
-	return (a);
+	//free resources etc ...
+	//
+	//
+	//
+	exit(0);
 }

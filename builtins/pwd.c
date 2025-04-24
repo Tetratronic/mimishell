@@ -25,7 +25,7 @@ int	pwd(void)
 		printf("%s\n", cwd);
 	else
 	{
-		perror("getcwd() error");
+		perror("pwd");
 		return (1);
 	}
 	return (0);
