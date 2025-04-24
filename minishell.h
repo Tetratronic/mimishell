@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit.c                                             :+:      :+:    :+:   */
+/*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenkaro <abenkaro@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 10:30:04 by abenkaro          #+#    #+#             */
-/*   Updated: 2025/04/24 10:30:07 by abenkaro         ###   ########.fr       */
+/*   Created: 2025/04/24 10:54:56 by abenkaro          #+#    #+#             */
+/*   Updated: 2025/04/24 11:03:34 by abenkaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <limits.h>
+#include <string.h>
+#include <readline/readline.h>
+#include <readline/history.h>
+#include "libft/libft.h"
 
-int	exit(/* vars */)
-{
-	//free resources etc ...
-	//
-	//
-	//
-	exit(0);
-}
+int	cd(char *dir);
+int echo(char **args);
+int	pwd(void);

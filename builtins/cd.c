@@ -6,17 +6,18 @@
 /*   By: abenkaro <abenkaro@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 20:18:55 by abenkaro          #+#    #+#             */
-/*   Updated: 2025/04/23 20:18:56 by abenkaro         ###   ########.fr       */
+/*   Updated: 2025/04/24 10:57:31 by abenkaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "minishell.h"
 
 int	cd(char *dir)
 {
 	int	a;
 
+	if (!dir || *dir == ' ' || *dir == '~')
+		dir = getenv("HOME");
 	a = chdir(dir);
 	if (a)
 		perror("cd");

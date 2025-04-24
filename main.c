@@ -10,15 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <readline/readline.h>
-#include <readline/history.h>
+#include "minishell.h"
 
-int	main(int argc, char **argv, char **envp)
+int	main(void)
 {
 	char	*line;
+	char	**broken;
 
 	while (1)
 	{
@@ -30,7 +27,11 @@ int	main(int argc, char **argv, char **envp)
 			add_history(line);
 			//parse
 		}
-		if ()
+		broken = ft_split(line, ' ');
+		if (!ft_strncmp(broken[0], "pwd", 4))
+			pwd();
+		else if (!ft_strncmp(broken[0], "cd", 3))
+			cd(broken[1]);
 		free(line);
 	}
 	return (0);
