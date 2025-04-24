@@ -16,7 +16,7 @@ $(NAME): $(LIBFT) $(OBJS) $(HEADER)
 	$(CC) $(CFLAGS) $(OBJS) -lreadline $(LIBFT) -o $(NAME)
 
 $(LIBFT):
-	make -C $(LIBFTDIR)
+	make bonus -C $(LIBFTDIR)
 
 clean:
 	make clean -C $(LIBFTDIR)
